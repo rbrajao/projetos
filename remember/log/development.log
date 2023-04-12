@@ -1,0 +1,271 @@
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE DATABASE `remember_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `remember_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for 127.0.0.1 at 2023-04-06 10:47:11 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 773)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 6743)
+
+
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('1143268810739741490', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAnnotations (20230406201013)
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE `annotations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230406201013')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFriends (20230406201147)
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE `friends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `address` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230406201147')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-04-06 20:13:27.519780', '2023-04-06 20:13:27.519780')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1143268810739741490')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2023-04-06 17:14:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 456)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1181)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-04-06 17:14:11 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/actionpack-7.0.4.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (Duration: 10.5ms | Allocations: 5296)
+  Rendered /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/actionpack-7.0.4.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.3ms | Allocations: 1693)
+  Rendered /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 19.3ms | Allocations: 11457)
+  Rendered layout /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/layouts/application.html.erb (Duration: 20.0ms | Allocations: 11837)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 12673)
+
+
+Started GET "/annotations" for ::1 at 2023-04-06 17:14:29 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:6
+  Rendered annotations/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 201.8ms | Allocations: 102524)
+Completed 200 OK in 208ms (Views: 203.1ms | ActiveRecord: 0.5ms | Allocations: 103936)
+
+
+Started GET "/friends" for ::1 at 2023-04-06 17:14:34 -0300
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  ↳ app/views/friends/index.html.erb:6
+  Rendered friends/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3223)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 4285)
+
+
+Started GET "/" for ::1 at 2023-04-06 17:16:44 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brajao/.rvm/rubies/ruby-2.7.2/lib/ruby/gems/2.7.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 451)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1175)
+
+
+Started GET "/welcome" for ::1 at 2023-04-06 17:16:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+Started GET "/welcome/index" for ::1 at 2023-04-06 17:16:54 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 14320)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 15203)
+
+
+Started GET "/" for ::1 at 2023-04-06 17:17:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 13922)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 14526)
+
+
+Started GET "/" for ::1 at 2023-04-06 17:18:13 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2368)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2612)
+
+
+Started GET "/" for ::1 at 2023-04-06 17:18:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2372)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2616)
+
+
+Started GET "/" for ::1 at 2023-04-07 13:15:23 -0300
+  
+ActiveRecord::ConnectionNotEstablished (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:53:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-07 13:15:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 35140)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 40121)
+
+
+Started GET "/annotation" for ::1 at 2023-04-07 13:18:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/annotation"):
+  
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('1143268810739741490', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1143268810739741490')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/friends" for ::1 at 2023-04-07 14:29:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.9ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  ↳ app/views/friends/index.html.erb:6
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 35986)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.9ms | Allocations: 41384)
+
+
+Started GET "/annotations" for ::1 at 2023-04-07 14:29:39 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (1.2ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:6
+  Rendered annotations/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1001)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3219)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 1.2ms | Allocations: 4266)
+
+
+Started GET "/annotations/new" for ::1 at 2023-04-07 14:57:37 -0300
+Processing by AnnotationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (Duration: 10.5ms | Allocations: 4541)
+  Rendered annotations/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4853)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 7075)
+Completed 200 OK in 58ms (Views: 21.5ms | ActiveRecord: 4.5ms | Allocations: 25128)
+
+
+Started GET "/annotations" for ::1 at 2023-04-07 14:57:39 -0300
+Processing by AnnotationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  ↳ app/views/annotations/index.html.erb:6
+  Rendered annotations/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 733)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2947)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 3216)
+
+
+Started GET "/friends" for ::1 at 2023-04-07 14:57:44 -0300
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  ↳ app/views/friends/index.html.erb:6
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2970)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 3237)
+
+
+Started GET "/friends/new" for ::1 at 2023-04-07 14:57:46 -0300
+Processing by FriendsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 5.3ms | Allocations: 2281)
+  Rendered friends/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2588)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4801)
+Completed 200 OK in 27ms (Views: 10.5ms | ActiveRecord: 4.2ms | Allocations: 19952)
+
+
+Started GET "/friends" for ::1 at 2023-04-07 14:57:48 -0300
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  ↳ app/views/friends/index.html.erb:6
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 732)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2938)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 3198)
+
+

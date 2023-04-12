@@ -1,0 +1,34 @@
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFathers (20230407190017)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "fathers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230407190017"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateChildren (20230407190150)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "children" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "father_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_cfc1ab3640"
+FOREIGN KEY ("father_id")
+  REFERENCES "fathers" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_children_on_father_id" ON "children" ("father_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230407190150"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-07 19:05:18.022429"], ["updated_at", "2023-04-07 19:05:18.022429"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFather Create (0.6ms)[0m  [1m[32mINSERT INTO "fathers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rafael"], ["created_at", "2023-04-07 19:05:53.363993"], ["updated_at", "2023-04-07 19:05:53.363993"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChild Create (0.7ms)[0m  [1m[32mINSERT INTO "children" ("name", "father_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "joao"], ["father_id", 1], ["created_at", "2023-04-07 19:07:03.091702"], ["updated_at", "2023-04-07 19:07:03.091702"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."father_id" = ?[0m  [["father_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChild Create (0.9ms)[0m  [1m[32mINSERT INTO "children" ("name", "father_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "paulo"], ["father_id", 1], ["created_at", "2023-04-07 19:08:13.849288"], ["updated_at", "2023-04-07 19:08:13.849288"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" ORDER BY "children"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFather Load (0.3ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" WHERE "fathers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]

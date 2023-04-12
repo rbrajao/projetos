@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Fathers</h1>
+
+<div id="fathers">
+  <% @fathers.each do |father| %>
+    <%= render father %>
+    <p>
+      <%= link_to "Show this father", father %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New father", new_father_path %>
